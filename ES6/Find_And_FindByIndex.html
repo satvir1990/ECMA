@@ -1,0 +1,65 @@
+<html>
+<title>
+    hello world
+</title>
+<script>
+
+// In ES6 (ECMAScript 2015), Array.prototype.find() and Array.prototype.findIndex() were
+//  introduced to simplify searching for elements in an array based on a conditional test.
+
+// 1. Array.prototype.find()
+// The find() method returns the value of the first element in the array that satisfies
+//  the provided testing function. If no elements satisfy the condition, it returns undefined.
+
+const numbers = [5, 12, 8, 130, 44];
+
+// Find the first number greater than 10
+const foundNumber = numbers.find(num1 => num1 < 8);
+
+console.log(foundNumber); // Output: 5
+
+
+//Working with Objects
+//find() is especially useful for searching arrays of objects:
+const users = [
+  { id: 1, name: 'Alice' },
+  { id: 2, name: 'Bob' },
+  { id: 3, name: 'Charlie' }
+];
+
+const user = users.find(u => u.id === 2);
+console.log(user);
+
+// Array.prototype.findIndex()
+// The findIndex() method returns the index of the first element in the array that 
+// satisfies the provided testing function.
+//  If no elements satisfy the condition, it returns -1.
+
+const numbers1 = [5, 12, 8, 130, 44];
+
+// Find the index of the first number greater than 10
+const foundIndex = numbers1.findIndex(num => num > 10);
+
+console.log(foundIndex);
+
+// Updating an Object in an Array
+// findIndex() is commonly used when you need to locate an item's position to modify or remove it
+
+const fruits = [
+  { name: 'apple', count: 2 },
+  { name: 'banana', count: 5 },
+  { name: 'orange', count: 8 }
+];
+
+const targetIndex = fruits.findIndex(fruit => fruit.name === 'banana');
+
+if (targetIndex !== -1) {
+  fruits[targetIndex].count += 1; // Update quantity
+}
+
+console.log(fruits[1]); // Output: { name: 'banana', count: 6 }
+
+
+</script>
+<body><h1>Find and Find By Idex in Array</h1></body>
+</html>

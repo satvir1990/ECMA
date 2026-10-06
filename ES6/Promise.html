@@ -1,0 +1,32 @@
+<html>
+<title>Promise</title>
+<script>
+    //A Promise in JavaScript is an object representing the eventual 
+    //completion or failure of an asynchronous operation and its resulting value.
+
+    //Instead of blocking execution, JavaScript continues running other code while 
+    //the async task works in the background.
+    const myPromise = new Promise((resolve, reject) => {
+        let success = false;
+
+        setTimeout(() => {
+            if (success) {
+                resolve("Data fetched successfully!");
+            } else {
+                reject("Error fetching data.");
+            }
+        }, 2000);
+    });
+
+    // Consuming the promise
+    myPromise
+        .then((result) => console.log(result)) ;  // Output after 2s: Data fetched successfully!
+        myPromise   .catch((error) => console.error(error))
+        .finally(() => console.log("Operation finished."));
+</script>
+
+<body>
+    <h1>Promise</h1>
+</body>
+
+</html>

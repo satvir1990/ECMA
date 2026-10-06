@@ -1,0 +1,65 @@
+<html>
+<title>
+    hello world
+</title>
+<script>
+
+// In JavaScript, functions are first-class objects, meaning their type is technically 
+// function" when checked with typeof, but under the hood, they inherit from Object.
+
+// Depending on how they are defined, written, or used, functions in JavaScript 
+// fall into several distinct types and patterns:
+
+//Named function
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// Function Expression
+// Assigned to a variable. They are not hoisted, so they cannot be called before 
+// definition. Can be named or anonymous.
+
+const greet1 = function(name) {
+  return `Hello, ${name}!`;
+};
+
+
+// Arrow Function (ES6)
+// Concise syntax for function expressions. They do not have their own this, arguments, super, or 
+// new.target bindings (they inherit this lexically from the parent scope).
+
+// Implicit return for single expressions
+const add = (a, b) => a + b;
+
+// Block body requirement for multiple statements
+const greet2 = (name) => {
+  return `Hello, ${name}!`;
+};
+
+const user = {
+  name: "Anil",
+  getName: function() {
+    console.log("Noraml",this.name); // "Anil"
+  }
+};
+
+console.log(user.getName());
+
+const user1 = {
+  name: "Anil",
+  getName: () => {
+    console.log("Arrow Fucntion",this); // Refers to the global 'window' object, NOT 'user'
+  }
+};
+
+console.log(user1.getName());
+
+// Why this matters: Arrow functions excel in callbacks (like array methods map, filter,
+//  or inside setTimeout)
+//  because they preserve the parent context without needing .bind(this).
+
+</script>
+<body>
+    <h1>Arrow function</h1>
+</body>
+</html>

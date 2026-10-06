@@ -1,0 +1,39 @@
+<html>
+
+</html>
+
+</html>
+<title>Spread Operator</title>
+<script>
+
+// The spread operator (...) in JavaScript allows an iterable (like an array, string, or object)
+//  to be expanded in places where zero or more arguments or elements are expected. It essentially "packs" or "unpacks" elements out of an data structure.
+
+// 1. Spreading Arrays
+// Combining & Copying Arrays
+// You can use the spread operator to easily concatenate arrays or create a shallow copy 
+// without mutating the original array.
+
+
+    const fruits = ['apple', 'banana'];
+    const vegetables = ['carrot', 'spinach'];
+
+    // Combining arrays
+    const food = [...fruits, ...vegetables,"OK"];
+    // Result: ['apple', 'banana', 'carrot', 'spinach']
+    console.log(food);
+
+    // Creating a shallow copy
+    const fruitsCopy = [...fruits];
+    fruitsCopy.push("sample");
+    // Result: ['apple', 'banana']
+    console.log(fruitsCopy);
+
+
+</script>
+
+<body>
+    <h1>Spread Operator</h1>
+</body>
+
+</html>

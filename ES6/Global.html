@@ -1,0 +1,18 @@
+<html>
+    <title>Global function</title>
+    <script>
+
+        // In JavaScript (ES6), global functions are functions available in the global scope 
+        // without needing an object instance. ES6 introduced and updated global functions to
+        //  make type checking and numeric operations safer and more consistent:
+
+       console.log(Number.isNaN("hello")); // false ("hello" is a string, not NaN)
+       console.log(Number.isNaN(NaN));     // true
+       console.log(Number.isNaN(null));
+
+       console.log(Number.isFinite("10")); // false (it's a string)
+       console.log(Number.isFinite(10));   // true
+       console.log(Number.isFinite(null));
+    </script>
+    <body><h1>Global Function</h1></body>
+</html>

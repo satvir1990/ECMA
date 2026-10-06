@@ -1,0 +1,41 @@
+<html>
+<title>Inheritance</title>
+<script>
+//Inheritance introduce in ES6 use to inherit parent class property in child class
+class Car {
+  // Constructor declaration
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+
+  getDetails() {
+    return `${this.brand} ${this.model}`;
+  }
+}
+
+// Creating an instance triggers the constructor
+//const myCar = new Car("Toyota", "Corolla");
+//console.log(myCar.getDetails()); // "Toyota Corolla"
+
+
+class ElectricCar extends Car {
+  constructor(brand, model, batteryCapacity) {
+    super(brand, model); // Calls the parent constructor
+    this.batteryCapacity = batteryCapacity;
+
+    console.log(this.brand, this.model , this.batteryCapacity) 
+
+    console.log(super.getDetails());
+
+  }
+}
+
+let ele = new ElectricCar("Camry" , "Hight" , "5000");
+
+
+
+
+</script>
+<body><h1>Inheritance</h1></body>
+</html>

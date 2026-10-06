@@ -1,0 +1,48 @@
+<html>
+<title>
+    hello world
+</title>
+<script>
+
+ //Introduced In ES6    
+class Fruits{
+    name = "Apple"
+
+    /**
+     *
+     */
+    constructor() {
+       console.warn("fruits",this.name);
+        
+    }
+    Fruits() {
+       console.warn("fruits",this.name);
+        
+    }
+}
+
+let fruit = new Fruits();
+fruit.Fruits();
+
+
+class Car {
+  // Constructor declaration
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+
+  getDetails() {
+    return `${this.brand} ${this.model}`;
+  }
+}
+
+// Creating an instance triggers the constructor
+const myCar = new Car("Toyota", "Corolla");
+console.log(myCar.getDetails()); // "Toyota Corolla"
+
+
+
+</script>
+<body><h1>Class Example</h1></body>
+</html>

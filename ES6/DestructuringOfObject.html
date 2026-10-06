@@ -1,0 +1,48 @@
+<html>
+
+</html>
+<title>Destrcturing Of Objects</title>
+<script>
+const user = {
+  name: "Anil Sidhu",
+  email: "anil@test.com",
+  mobile: 9999999999
+};
+
+// Traditional way
+const name1 = user.name;
+const email1 = user.email;
+
+console.log(name1 , email1)
+
+
+// Object destructuring
+const { name2, email, mobile2 } = user;
+
+console.log(name2);  // "Anil Sidhu"
+console.log(email); // "anil@test.com"
+
+
+//key feature 
+
+const { mobile1, name } = user; 
+console.log(mobile1); // 9999999999
+
+
+
+const { mobile, ...otherDetails } = user;
+
+console.log(mobile);       // 9999999999
+console.log(otherDetails); // { name: "Anil Sidhu", email: "anil@test.com" }
+
+
+
+
+
+</script>
+
+<body>
+    <h1>Destrcturing Of Objects</h1>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+<title>Rest Operator</title>
+<script>
+    // The rest operator (...) in ES6 (ECMAScript 2016) allows a function to 
+    // accept an indefinite number of arguments as an array. It gathers all remaining
+    //  ("rest of the") parameters passed into a function into a single array variable.
+
+    // Key Concepts & Usage
+    // 1. Basic Example (Handling Variable Arguments)
+    // Instead of relying on the legacy arguments object, the rest operator provides 
+    // a clean array containing all passed arguments.
+
+    function alphabet(a, b, c, ...z) {
+        console.log(`Alpha`, { z });
+    }
+
+    alphabet('a', 'b', 'c', 'd', 'e', 'f')
+</script>
+
+<body>
+    <h1>Rest Operator</h1>
+</body>
+
+</html>s

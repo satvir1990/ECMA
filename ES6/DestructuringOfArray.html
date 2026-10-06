@@ -1,0 +1,60 @@
+<html>
+
+</html>
+<title>Destrcturing Of Array</title>
+<script>
+
+
+    // In JavaScript (ES6), Array Destructuring allows you to unpack values 
+    // from arrays into distinct variables using a clean, concise syntax.
+    const fruits = ["Apple", "Mango", "Kiwi"];
+
+
+
+    // Basic extraction [00:01:59]
+    const [first, second, third] = fruits;
+
+    console.log(first);  // "Apple"
+    console.log(second); // "Mango"
+    console.log(third);  // "Kiwi"
+
+
+    // skipping values 
+
+    // Skip the second element ("Mango")
+    const [first1, , third1] = fruits;
+
+    console.log(first1); // "Apple"
+    console.log(third1); // "Kiwi"
+
+
+    //Default Value
+
+
+
+    // Default value used if fourth element is missing
+    const [first2, second2, , fourth = "Unknown Fruit"] = fruits;
+
+    console.log(fourth); // "Unknown Fruit"
+
+
+
+    //With Rest Operator
+
+
+
+    // First item in 'first', remaining items in 'otherFruits'
+    const [first4, ...otherFruits] = fruits;
+
+    console.log(first4);       // "Apple"
+    console.log(otherFruits); // ["Mango", "Kiwi", "Orange"]
+
+
+
+</script>
+
+<body>
+    <h1>Destrcturing Of Array</h1>
+</body>
+
+</html>

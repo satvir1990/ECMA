@@ -1,0 +1,57 @@
+<html></html>
+
+</html>
+<title>Generators</title>
+<script>
+// In JavaScript (ES6), Generators are special functions that can be
+// paused during execution and resumed later from where they were paused, 
+//retaining their context and variable states.
+
+// Key Concepts
+// Syntax (function*): Defined using an asterisk * after the function keyword 
+//(e.g., function* myGenerator()).
+
+// Yield Statement (yield): Pauses function execution and returns the value
+// specified after it to the caller.
+
+// Iterator Interface (.next()): Calling a generator function does not execute
+// its body immediately. Instead, it returns a Generator Object (an iterator).
+// Calling .next() on this object executes the function until it encounters
+// the next yield expression.
+
+// Return Value: Calling .next() returns an object with two properties:
+
+// value: The value yielded or returned by the generator.
+
+// done: A boolean set to false if the generator can yield more values, or true if it has finished execution.
+
+
+function* stepGenerator() {
+    let a = 10;
+    let b = 20;
+
+    console.log("Execution Started");
+    yield { result: a + b, message: "Step 1 Completed" }; // Pauses here
+
+    yield { result: b - a, message: "Step 2 Completed" }; // Pauses here
+
+    return "All steps done"; // End of generator
+}
+
+// Create an instance of the generator
+const steps = stepGenerator();
+
+// 1. First execution
+console.log(steps.next());
+// Output in console: "Execution Started"
+// Returns: { value: { result: 30, message: "Step 1 Completed" }, done: false }
+
+// 2. Second execution
+console.log(steps.next());
+</script>
+
+<body>
+    <h1>Generators</h1>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+<title>Lexical</title>
+<script>
+
+
+// Lexical scope (also known as static scope) determines variable accessibility 
+// based on where variables and blocks of code are defined in the source code at
+//  author time, rather than where or how functions are called at runtime.
+
+//  Lexical this with Arrow Functions
+//  In traditional functions, this inside callbacks often loses context or becomes
+//   undefined in strict mode:  
+  
+
+const user = {
+    name: "Rahul",
+    skills: ["JS", "Playwright"],
+    showSkills() {
+
+        console.log(this.name); // Output: Rahul
+        // Traditional function loses 'this' inside setTimeout
+        setTimeout(function() {
+            console.log(this.name); // Output: undefined (or Window object)
+        }, 500);
+
+        // Arrow function retains lexical 'this' from showSkills()
+        setTimeout(() => {
+            console.log(this.name); // Output: Rahul
+        }, 500);
+
+
+    }
+};
+
+user.showSkills();
+    
+</script>
+<body><h1>Lexical</h1></body>
+</html>
