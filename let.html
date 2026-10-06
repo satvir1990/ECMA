@@ -1,0 +1,31 @@
+<html>
+    <title>
+        hello world
+    </title>
+    <script>
+        // scope of let is block level but Var is treated as global
+         //    i = 0;
+            if(true){
+                var i = 1;
+            console.log(i);
+            }
+            console.log(i);
+
+// hoisting of let throws error uncaught referrence error 
+// And  hoisting in var show undefined 
+            console.log(a);
+            var a = 5;
+
+// let vs var has different  execution output due to their scope
+// let intitalize every time in loop but var didn,t 
+            for (var i=0; i<11; i++){
+
+                setTimeout(() => {
+                   console.warn(i);
+                }, 1000);
+            }
+    </script>
+    <body>
+        <h1>Hello</h1>
+    </body>
+</html>
